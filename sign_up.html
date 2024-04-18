@@ -72,33 +72,27 @@
   const database = detDatabase(app);
   const auth = getAuth();
 
-  sighUp.addEventListener('click',(e) => {
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
-    var username = document.getElementById('username').value;
+sighUp.addEventListener('click',(e) => {
 
-createUserWithEmailAndPassword(auth, email, password)
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+  var username = document.getElementById('username').value;
+
+  createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
-    alert('user created!');
+    alert('suer created!');
     // ...
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
 
-    alert('errorMessage');
+    alert(errorMessage);
     // ..
   });
-
-  });
-</script>
-</html>
-      
-
-    
-  });
+});
 
 </script>
     
